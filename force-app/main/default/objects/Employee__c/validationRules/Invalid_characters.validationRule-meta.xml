@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Invalid_characters</fullName>
+    <active>true</active>
+    <description>Field contains invalid characters</description>
+    <errorConditionFormula>NOT( REGEX( ID_Number__c, &quot;(([a-zA-Z]{1})\\d{7})&quot;))</errorConditionFormula>
+    <errorDisplayField>ID_Number__c</errorDisplayField>
+    <errorMessage>Field contains invalid characters</errorMessage>
+</ValidationRule>

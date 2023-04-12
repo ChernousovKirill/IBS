@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Vacation_Days_Required__c</fullName>
+    <externalId>false</externalId>
+    <formula>(5 * FLOOR( ( End_Date__c  - DATE( 1900, 1, 8) ) / 7 ) 
+    + MIN( 5, MOD( End_Date__c - DATE( 1900, 1, 8), 7 )  ) 
+) - 
+(5 * FLOOR( ( Start_Date__c - DATE( 1900, 1, 8) ) / 7 ) 
+      + MIN( 5, MOD( Start_Date__c - DATE( 1900, 1, 8), 7 ) ) 
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Total Vacation Days Required</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

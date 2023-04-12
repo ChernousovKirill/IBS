@@ -1,0 +1,25 @@
+<messaging:emailTemplate subject="Please, do not replay!" recipientType="User" relatedToType="User">
+    <messaging:htmlEmailBody >
+        <body>
+            <div class="slds-grid slds-wrap slds-grid--pull-padded" style="margin:0; width: 100%; height:auto; ">
+                <div class="slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-1" style=" width: 100%; padding: 0px 10px;">
+                        <div class="slds-grid slds-wrap slds-grid--pull-padded" style="width: 100%; padding: 10px 10px; color: #000000; font: normal 18px sans-serif;">
+                            <apex:image value="https://creative-panda-kskln5-dev-ed.trailblaze.my.salesforce.com/servlet/servlet.ImageServer?id=0150900000039gQAAQ&oid=00D0900000DxEGx" style="display:block; width 50%;"></apex:image>
+                        <div style="margin-top: 25px">
+                            <b>Dear colleague, </b>
+                        </div>
+                        <div style="margin-top: 25px">
+                            You received this email because you confirmed this action <br/>and may have wanted to see all the Expense Distributions
+                        </div>
+                        <div style="margin-top: 25px">
+                            <c:emailDatatable ></c:emailDatatable>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </body>
+    </messaging:htmlEmailBody>
+    <messaging:plainTextEmailBody >
+    
+    </messaging:plainTextEmailBody>
+</messaging:emailTemplate>

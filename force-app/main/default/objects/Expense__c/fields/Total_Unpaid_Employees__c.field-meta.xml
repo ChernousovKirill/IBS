@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Unpaid_Employees__c</fullName>
+    <description>Total number of employees that didn’t paid all the expense yet</description>
+    <externalId>false</externalId>
+    <label>Total Unpaid Employees</label>
+    <summaryFilterItems>
+        <field>Expense_Distribution__c.is_Full_Amount_Paid__c</field>
+        <operation>equals</operation>
+        <value>False</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Expense_Distribution__c.Expense__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

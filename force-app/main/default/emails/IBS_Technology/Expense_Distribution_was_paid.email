@@ -1,0 +1,29 @@
+<messaging:emailTemplate subject="Expense Distribution was successfully paid" recipientType="User" relatedToType="Expense_Distribution__c">
+<messaging:htmlEmailBody >
+<html>
+    <body>
+        <div class="slds-grid slds-wrap slds-grid--pull-padded" style="margin:0; width: 100%; height:auto; ">
+            <div class="slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-1" style=" width: 100%; padding: 0px 10px;">
+                <div class="slds-grid slds-wrap slds-grid--pull-padded" style="width: 100%; padding: 10px 10px; color: #000000; font: normal 18px sans-serif;">
+                    <apex:image value="https://creative-panda-kskln5-dev-ed.trailblaze.my.salesforce.com/servlet/servlet.ImageServer?id=0150900000039gQAAQ&oid=00D0900000DxEGx" style="display:block; width 50%;"></apex:image>
+                <div style="margin-top: 25px">
+                    <b>Dear colleague, </b>
+                </div>
+                <div style="margin-top: 25px">
+                    We inform you that Expense Distribution under the number {!RelatedTo.Name}
+                </div>
+                <div style="margin-top: 5px">
+                    More information can be found at the &nbsp;<apex:outputlink value="{!LEFT($Api.Partner_Server_URL_140,FIND('.com',$Api.Partner_Server_URL_140)+4)+relatedTo.Id}">link</apex:outputlink>
+                </div>
+            </div>
+        </div>
+        </div>
+    </body>
+</html>
+</messaging:htmlEmailBody>
+<messaging:plainTextEmailBody >
+    Dear colleague,
+    We inform you that Expense Distribution under the number {!RelatedTo.Name}
+    More information can be found at the  link
+</messaging:plainTextEmailBody>
+</messaging:emailTemplate>

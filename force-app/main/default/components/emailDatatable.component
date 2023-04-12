@@ -1,0 +1,19 @@
+<apex:component access="global" controller="EmailService" >
+    <apex:dataTable value="{!expenseDistributions}" var="expenseDistr" id="expenseDistributionsTable" border="1">
+      <apex:column headerValue="Number">
+        <apex:outputText value="{!expenseDistr.Name}"/>
+      </apex:column>
+	  <apex:column headerValue="Employee">
+         <apex:outputText value="{!expenseDistr.Employee__r.Name}"/>
+      </apex:column>
+	  <apex:column headerValue="Expense">
+         <apex:outputText value="{!expenseDistr.Expense__r.Name}"/>
+      </apex:column>
+      <apex:column headerValue="Amount">
+         <apex:outputField value="{!expenseDistr.Amount__c}"/>
+      </apex:column>
+      <apex:column headerValue="Paid Amount">
+         <apex:outputText value="{!expenseDistr.Paid_Amount__c}"/>
+      </apex:column>
+    </apex:dataTable>
+</apex:component>

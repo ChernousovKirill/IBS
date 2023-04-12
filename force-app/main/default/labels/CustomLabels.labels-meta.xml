@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>typeAndIdMustBeUnique</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>The values of the ID Type and ID Number fields must be unique.</shortDescription>
+        <value>The values of the ID Type and ID Number fields must be unique.</value>
+    </labels>
+</CustomLabels>
